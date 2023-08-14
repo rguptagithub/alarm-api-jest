@@ -5,7 +5,7 @@ import AlarmOccurrenceModel, {IAlarmOccurrence} from '../src/models/alarmOccurre
 
 describe('alarmoccurrence api', () => {
   beforeAll(async () => {
-    await mongoose.connect('mongodb://127.0.0.1:27017/tets_book_db', { retryWrites: true, w: 'majority' });
+    await mongoose.connect('mongodb://127.0.0.1:27017/test_alarms_db', { retryWrites: true, w: 'majority' });
   });  
 
   afterAll(async () => {
