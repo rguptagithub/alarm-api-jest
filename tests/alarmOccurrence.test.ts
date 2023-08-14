@@ -96,7 +96,7 @@ describe('alarmoccurrence api', () => {
       alarmpriority: 'MEDIUM',
     };
 
-    // Update alarmoccurrence
+    // Update an alarmoccurrence
     const response = await request(app)
       .patch(`/api/alarmoccurrences/${createdAlarmOccurrence.alarminstanceid}`)
       .send(updatedAlarmOccurrenceData)
@@ -122,7 +122,7 @@ describe('alarmoccurrence api', () => {
     expect(response.body).toHaveProperty('error', 'alarmoccurrence not found');
   });
 
-  //delete an alarmoccurrence
+  // Delete an alarmoccurrence
   it('should delete an alarmoccurrence with status 200', async () => {
     const newAlarmOccurrence = {
       "alarminstanceid":4,
